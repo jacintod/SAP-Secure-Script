@@ -27,5 +27,6 @@ This solution was built specifically in mind to be deployed on a SAP BW System l
 
   * You can securely call any other script, for the purposes on this project python was used, but you can call any script. For Example: Bash script, Perl Script, R Script, Java Program, etc
 
+*Usage of the secure script framework :*
 
-
+For more information on the usage and the steps required to make use of the secure script framework, kindly refer to the [Wiki Secure Script](https://github.com/jacintod/SAP-Secure-Script/wiki "SAP Secure Script Framework")

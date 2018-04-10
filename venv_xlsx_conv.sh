@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo 'Executing VirtualEnv activate script'
 source /usr/sap/SAPBW/intf/py_scripts/xlsx_conv/bin/activate
 echo 'Verify that the virtualenv is active'

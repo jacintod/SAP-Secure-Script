@@ -4,6 +4,13 @@ The reason for building the secure script framework was due to the strict securi
 Although, in theory we could use the security roles to limit access to these programs in order to achieve this requirement of ensring that any script that SAP BW is executing is secure. There was an additional need to ensure proper ITSM principles and procedures by providing an audit trail. (i.e. Transports, Remedy Service Request, Change Approval's, Testing, etc)
 This solution was built specifically in mind to be deployed on a SAP BW System landscape, but this does not have to be limited to SAP BW, it could be deployed onto any SAP Systems if required. 
 
+This framework was borne off the fact that the customer had complex requirements that couldn't be meet by using standard SAP security roles. You could secure the execution of the OS commands by using the SXPT framework.
+
+Security is a complex and layered topic. In addition to having the secure script it needs to be done in conjunction with the security team to assign the relevant roles in and build the security model so that it will only allow execution of OS commands if you have a valid role and that all of the execution of the OS commands (scripts) is done via the secure script framework.
+
+The reality of the secure script framework is that it basically only really limits the execution of the script (i.e. SM69 OS command) if the hash code value matches the value in the table. The rationale with this framework was that there was requirements to limit the execution of any scripts (OS commands) whilst not disrupting the current support model and providing an audit trail. Unfortunately due to complex requirements and other project dynamics within the project and support team, this method was the only preferred way of securing the execution of the scripts.
+
+In addition to the secure script framework, it is recommended to build the relevant security roles which will limit any access to execute SM69 OS commands and any execution of OS commands (Scripts) through the Z_SECURE_SCRIPT_EXECUTE function module.
 
 *In essence this framework does the following :*
 

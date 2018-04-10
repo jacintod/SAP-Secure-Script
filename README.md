@@ -2,6 +2,7 @@
 
 The reason for building the secure script framework was due to the strict security requirements ascribed by the client. One of the challenges is that the SAP BW System had several programs which allowed the support users to upload files to the file system, thus in theory they could upload malicious scripts and then execute them on the server / environment.
 Although, in theory we could use the security roles to limit access to these programs in order to achieve this requirement of ensring that any script that SAP BW is executing is secure. There was an additional need to ensure proper ITSM principles and procedures by providing an audit trail. (i.e. Transports, Remedy Service Request, Change Approval's, Testing, etc)
+
 This solution was built specifically in mind to be deployed on a SAP BW System landscape, but this does not have to be limited to SAP BW, it could be deployed onto any SAP Systems if required. 
 
 This framework was borne off the fact that the customer had complex requirements that couldn't be meet by using standard SAP security roles. You could secure the execution of the OS commands by using the SXPT framework.
